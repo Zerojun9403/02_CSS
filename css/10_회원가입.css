@@ -58,6 +58,33 @@ fo white*/
   justify-content: center;
   align-items: center;
 }
+
+.form-body input:focus {
+  /*
+  고전방식
+  border: 2px solid pink;
+  outline: none;
+  */
+
+  outline: 2px solid pink;
+}
+/*
+input 기본으로 작성되어 있는 테두리를 제거 
+outline: none;
+input 
+ border 를 이용해서 색상이나 테두리 굵기 테두리 모양 지정
+ input:hover
+  input 에서 기존에 작성해놓은 속성을 따르되,
+  테두리 굵기나 모양은 그대로 지정해놓고 
+  border-color 를 사용
+  input:focus
+  bordeer : 선두께 선종류 선색사으로 지정해주고 
+  outline: none 설정해줄수 있지만  
+  outline: 선두께 선종류 선색상을 한번에 지정해주는 것이 편리함.
+*/
+.form-body input:hover {
+  border-color: orange;
+}
 .form-body button {
   /* 위 마진 25px
     패딩 8px 12PX
