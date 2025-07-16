@@ -1,0 +1,124 @@
+div {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.test {
+  width: 300px;
+  height: 200px;
+  background-color: #ddd;
+}
+
+/*
+        float 지정 식 block  성질 해제(한줄 차지 x)
+      */
+
+.float-left {
+  width: 50px;
+  height: 50px;
+  float: left;
+  background-color: pink;
+}
+
+.clear-left {
+  /* float 된 요소 아래로 현재 스타일이 적용된 태그를 
+        강제로 내려오도록 설정
+        어디로 내려오냐면 left 왼쪽으로 내려오도록 설정*/
+  clear: left;
+}
+
+.float-right {
+  width: 50px;
+  height: 50px;
+  float: right;
+  background-color: yellow;
+}
+
+.clear-right {
+  /* float 된 요소 아래로 현재 스타일이 적용된 태그를 
+        강제로 내려오도록 설정
+        어디로 내려오냐면 left 왼쪽으로 내려오도록 설정*/
+  clear: right;
+}
+
+.clear-both {
+  /*
+        하나의 태그 요소에 css 속성을 여러번 지정하도라도 
+        맨 마지막에 작성된 속성 값을 덮어 씌워진다.
+        */
+  clear: left;
+  clear: right;
+  clear: both;
+}
+
+/*
+      CSS 폴더 내에 이미 box style 이 존재하므로 
+      작성을 하지 않아도 기존에 작성도니 스타일이 적용 됨
+      */
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightsalmon;
+}
+
+#test1 {
+  padding-top: 10px;
+  padding-bottom: 200px;
+  padding-left: 5px;
+  padding-right: 150px;
+
+  margin-top: 130px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 300px;
+
+  /* 
+        borber 선
+        borber 선 : 선의 굵기 선종류 선 색상
+                  solid = 실선
+                  dotted=점(.)선
+                  double=이중실선
+                  dashed=점(-)선
+        */
+
+  border-top: 5px solid red;
+  border-bottom: 3px dotted black;
+  border-left: 10px double violet;
+  border-right: 3px dashed purple;
+}
+
+#test2 {
+  /* border 는 한 번에 쓸때 상우하좌의 굵기를 통일해서 잓어
+        속성값을 2개에서 4개로 나눠서 작성하길 원한다면 
+        border-top: 5px solid red;
+        border-bottom: 3px dotted black;
+        border-left: 10px double violet;
+        border-right: 3px dashed purple;
+
+        위와 같은 형식으로 지정해서 작성해주어야 함
+
+         border: 2px 3px solid black; -->절대 금지 
+        
+         border-radius  모서리를 둥글게 만들 때 사용 
+         버튼이나 이미지 각을 둥그렇게 만들 때 많이 사용
+        */
+  border: 2px solid black;
+
+  border-radius: 3px;
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  border: 3px solid black;
+
+  box-sizing: content-box; /*
+        이름 내부에 들어있는 margin padding 적용
+        */
+}
+
+#test3 {
+  /* auto 의 경우 좌우 가운데 정렬*/
+  margin: auto;
+  margin-top: 200px;
+}

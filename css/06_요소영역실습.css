@@ -1,0 +1,61 @@
+.btn-basic {
+  background-color: #4caf50;
+  color: white;
+  /*  상하 좌우 버튼 패딩: 상하 패딩보다 좌우 패딩 값을 크게 만듬 */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/*버튼 위로 마우스를 올렸을때 나타나는 변화 스타일*/
+.btn-basic:hover {
+  background-color: blue;
+  color: aqua;
+  font-size: 20px;
+}
+/*버튼 위로 마우스를 클릭했을때 나타나는 변화 스타일*/
+.btn-basic:active {
+  background-color: red;
+  font-size: 30px;
+  color: pink;
+}
+
+/*
+      bg #ff6f6l
+      co wiht
+      padin 상하 12 좌우 24
+      실선 없음
+      모서리 둥글기 12
+      글자크기 18
+      글자 굴기 굴게
+      마우스 올렸을때 pointer
+
+      마우스 올렸을대
+      bg: #ff3b2e
+      co: #fffde7
+
+      마우스 버튼 액선
+       bg
+      */
+
+.btn-pretty {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-pretty:hover {
+  background-color: #ff3b2e;
+  color: #fffde7;
+}
+
+.btn-pretty:active {
+  background-color: #d6281d;
+  color: #fffde7;
+}

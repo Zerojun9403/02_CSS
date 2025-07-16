@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+}
+
+.title {
+  background-color: #ff7043;
+  color: white;
+  font-size: 28px;
+  padding: 20px;
+}
+
+.box {
+  background-color: #ffe0b2;
+
+  padding: 20px;
+  border: 5px solid #ff7043;
+  margin: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.nav {
+  margin: 10px auto;
+}
+/*.nav 클래스 내부에 존재하는 a 태그만 스타일 적용 */
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #d84315;
+}
+
+.pizza-item {
+  width: 250px;
+  background-color: white;
+  padding: 15px;
+  border: 3px #ffa726;
+  border-radius: 10px;
+}
+img {
+  width: 200px;
+  height: 200px;
+}
+.pizza-list {
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  background-color: #ffccbc;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+
+  /* 
+        position
+        
+        */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.pizza-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+  border: 2px solid black;
+  cursor: pointer;
+  z-index: 5;
+}

@@ -1,0 +1,31 @@
+/* html 크기의 기본요소는 기본적으로 content-box 기준으로 값 계산
+      content-box 
+      widht+padding+border 이 더해져서 실제 html 전체 크키가 결정 
+      border-box  로 변경한다는 것은 불필요한 여백 지우기
+      */
+* {
+  box-sizing: border-box;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightsalmon;
+}
+
+.border {
+  border: 10px solid black;
+}
+
+.content {
+  width: 150px;
+  height: 150px;
+  /*기존 wi*/
+  box-sizing: content-box;
+}
+/**/
+.padding {
+  width: 200px;
+  height: 200px;
+  /* 상 하 좌 우 content border 사이에 20px 띄움*/
+  padding: 20px;
+}
