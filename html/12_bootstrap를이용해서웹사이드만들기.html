@@ -65,6 +65,59 @@
         <h2>우리의 서비스</h2>
         <p>다양한 분야에서 전문적인 서비스를 제공합니다.</p>
       </div>
+      <style>
+        .box {
+          background-color: lightblue;
+        }
+      </style>
+      <!-- 
+       row한줄에서 
+       col 한 행을 사용하면
+       모든 박스가 동일한 너비로 한 줄 배치 
+       기기 가로 사이즈가 줄어서 더이상 
+       한줄에 담을 수 없을때 까지 
+       -->
+      <div class="row">
+        <div class="col-6 box">박스1</div>
+        <div class="col-3 box">박스2</div>
+        <div class="col-3 box">박스3</div>
+      </div>
+      <!--아래에 row 클래스를 만들고 
+       col-2 를 이용해서 한줄에 div가 꽉 차도록 div만들어주기 
+       -->
+      <style>
+        .box1 {
+          background-color: lightpink;
+        }
+      </style>
+      <div class="row">
+        <div class="col-2 box1">Box</div>
+        <div class="col-2 box1">Box</div>
+        <div class="col-2 box1">Box</div>
+        <div class="col-2 box1">Box</div>
+        <div class="col-2 box1">Box</div>
+        <div class="col-2 box1">Box</div>
+      </div>
+      <!--   아래  row 클래스 만들고 col-3 꽉차게-->
+      <style>
+        .box3 {
+          border: 1px solid black;
+          border-radius: 10px;
+          box-shadow: 5px 8px rgba(0, 0, 0.4, 0.8);
+        }
+        .box3:nth-child(odd) {
+          background-color: lightgreen;
+        }
+        .box3:nth-child(even) {
+          background-color: lightcoral;
+        }
+      </style>
+      <div class="row">
+        <div class="col-3 box3">box</div>
+        <div class="col-3 box3">box</div>
+        <div class="col-3 box3">box</div>
+        <div class="col-3 box3">box</div>
+      </div>
     </div>
 
     <script
