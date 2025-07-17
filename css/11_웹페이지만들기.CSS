@@ -1,0 +1,37 @@
+/*
+1. body-top 클래스 에 
+마진 패딩 0
+
+2. header 전체박스 
+로고가 들어갈 위치 
+로그인 | 회원거ㅏ입 
+한줄에 존재하도록 display
+패딩 15 30
+배경색상 #ddd
+좌 우 나누기 
+justfly-content : space-between
+align-items : center
+*/
+
+.body-top {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  padding: 15px 30px;
+  background-color: #ddd;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  font-size: 24px;
+}
+
+.header-right a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #555;
+}

@@ -238,6 +238,6 @@ check:checked 를 사용하게 좋음
  동위 선택자 후손 선택자 >  를 이용해서 #imgFlie-2 다음 label 내부에 img 만 선택 작성
 */
 #imgFlie-2 + label > img {
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
 }
