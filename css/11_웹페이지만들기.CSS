@@ -65,9 +65,12 @@ align-items : center
 }
 
 .banner {
-  display: block;
+  display: flex;
+  justify-content: center;
   background-image: url(../images/banner1.png);
-  background-size: cover;
+  background-size: auto 145%;
+  /* 배경을 반복 하지 안함 */
+  background-repeat: none;
   /*contain -> 이미지 사이즈가 기기너비 만큼복재*/
   background-position: center;
   width: 100%;
