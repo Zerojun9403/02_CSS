@@ -146,3 +146,98 @@ p[data="data-2"] {
 .input3:disabled {
   background-color: pink;
 }
+
+/*---- 동위 선택자 ----*/
+/* + : 바로 뒤 형제 요소 하나*/
+#div1 + div {
+  background-color: yellow;
+}
+
+/* 
+~ : 뒤에 존재하는 형제 요소 중 일치하는 요소 모두 선택
+*/
+#div3 ~ div {
+  /* 중간에 존재하는 P 태그를 제외하고 div는 모두 배경색 설정*/
+  background-color: springgreen;
+}
+
+/* ----- 체크 박스 만들기 ---- */
+/* 1. label 요소를 체크박스 모양으로 만들기
+   + 다음(뒤)에 위치한 요소를 선택하는 선택자
+   #check 라는 태그 요소 바로 뒤에 있는 label 하나만 선택하겠다! 
+*/
+#check + label {
+  width: 30px; /*너비*/
+  height: 30px; /*높이*/
+  border: 1px solid black; /* 태두리 */
+
+  /* 크기 지정 0 , 한줄에 배치 할 수 있도록 수평 분할 !*/
+
+  display: inline-block;
+  cursor: pointer; /* 마우스 포인터 모양을 손가락으로 변경 */
+  border-radius: 20%;
+
+  user-select: none; /* 사용자가 선택(블럭)을 못하게 함*/
+}
+
+/* 2.체크박스가 체크되었을 때 label 에 체크박스 이미지 표시*/
+
+/* 
+1.check+label 의 경우 체크박스에 체크를 하지 않아도 
+  체크를 한 듯 한 이미지가 보이는 경우 
+#check: + label {
+  background-image: url("../images/checkbox.png");
+  background-size: cover;
+}
+2.check:checked + label  의 경우 체크박스에 체크를 해야지만
+  체크를 한 듯 한 이미지가 보이게 됨!
+#check:checked + label {
+  background-image: url("../images/checkbox.png");
+  background-size: cover;
+}
+
+만약에 빈 네모창에서 개발자가 넣고자 하는 체크가 된 박스 이미를 표시하기를 원한다면
+check:checked 를 사용하게 좋음 
+*/
+#check:checked + label {
+  background-image: url("../images/checkbox.png");
+  background-size: cover;
+}
+
+/* 3번 체크박스는 존재하지만 모이지 않게 */
+#check {
+  display: none;
+}
+/* ---- 파일 버튼 만들기 ---- */
+
+/* 1번 파일 선택 버튼을 업로드한 이미지로 변경하기 */
+
+#imgflie + label {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  /* 라벨의 경우에는 label 태그 내부에 텍스트를 작성해주거나 
+  라벨 내부에 이미지를 업로드 해야함 
+  */
+  display: inline-block;
+  border-radius: 20%;
+  cursor: pointer;
+  background-image: url("../images/upload.png");
+  background-size: cover;
+  user-select: none;
+}
+/*2. 파일 선택 input 숨기기*/
+#imgflie {
+  display: none;
+}
+/*---- 파일 버튼 만들기 2탄---*/
+#imgFlie-2 {
+  display: none;
+}
+/* imgFlie-2 다음에 오는 img 크기 조정하기 
+ 동위 선택자 후손 선택자 >  를 이용해서 #imgFlie-2 다음 label 내부에 img 만 선택 작성
+*/
+#imgFlie-2 + label > img {
+  width: 30px;
+  height: 30px;
+}
