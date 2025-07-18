@@ -1,3 +1,5 @@
+/***** 공통 CSS *****/
+
 body {
   margin: 0;
   background-color: #f9f9f9;
@@ -65,6 +67,13 @@ a 태그 위 마우스 올리면 배경색 fff5252
   background-color: #ff5252;
 }
 
+.nav .move-link {
+  background-color: #28a745;
+}
+.nav .move-link:hover {
+  background-color: #218838;
+}
+/* ** ==== 메인페이지 CSS ==== ** */
 .alert {
   background-color: #fff3cd;
   padding: 20px;
@@ -124,6 +133,47 @@ a 태그 위 마우스 올리면 배경색 fff5252
   text-align: left;
   color: #666;
   margin: 0;
+}
+
+/*** ======= 회원가입 CSS ======== ***/
+.sing-container {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.sing-container label {
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.sing-container input,
+.sing-container select,
+.sing-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.sing-container input:focus,
+.sing-container select:focus,
+.sing-container textarea:focus {
+  outline-color: #ff6b6b;
+}
+.sing-container textarea {
+  height: 80px;
+  resize: none;
+}
+
+.sing-container button {
+  padding: 12px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* 태블릿 반응형 768px */
