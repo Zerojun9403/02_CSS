@@ -147,10 +147,16 @@ a 태그 위 마우스 올리면 배경색 fff5252
   color: #333;
   font-weight: bold;
 }
+.sign-container label span{
+  color: #ff4444;
+  font-size: 16pt;
+  margin-left: 2px;
+  font-weight: bold;
+}
 
-.sing-container input,
-.sing-container select,
-.sing-container textarea {
+.sing-container > label >input,
+.sing-container > label >select,
+.sing-container > label >textarea {
   width: 100%;
   padding: 10px;
   border: 2px solid #ddd;
@@ -167,6 +173,29 @@ a 태그 위 마우스 올리면 배경색 fff5252
   resize: none;
 }
 
+.checkbox-group {
+  margin-top: 0px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+ 
+}
+
+.checkbox-group label{
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 8px
+}
+
+.checkbox-group input{
+  margin-right: 8px"
+}
+
+.checkbox-group {
+   display: inline;
+}
+
+
 .sing-container button {
   padding: 12px 30px;
   margin: 0 10px;
@@ -176,12 +205,49 @@ a 태그 위 마우스 올리면 배경색 fff5252
   cursor: pointer;
 }
 
+.btn-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 회원가입 버튼 */
+.sign-container button:first-child {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.sign-container button:first-child:hover {
+  background-color: #ff5252;
+}
+
+/* 초기화 버튼 */
+.sign-container button:last-child {
+  background-color: #6c757d;
+  color: white;
+}
+
+.sign-container button:last-child:hover {
+  background-color: #5a6268;
+}
+
+/* 메인 프로그램*/
 /* 태블릿 반응형 768px */
 @media (max-width: 768px) {
   .container {
     width: 100%;
     padding: 20px;
     margin: 0px;
+  }
+
+  .sign-container {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+
+  .btn-group button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
   }
 
   h1 {
@@ -232,5 +298,15 @@ a 태그 위 마우스 올리면 배경색 fff5252
   .alert {
     padding: 15px;
     font-size: 0.9rem;
+  }
+
+  .sign-container input,
+  .sign-container select,
+  .sign-container textarea {
+    font-size: 16px; /* iOS 줌 방지 */
+  }
+
+  .sign-container button {
+    padding: 15px;
   }
 }
