@@ -10,9 +10,13 @@
     
     
     */
-  background-color: lightblue;
+
   height: 75vh; /* 현재 화면에 75% 만 차지하겠다. */
   display: flex;
+  /* ***** flex-wrap ***** */
+  /* item 이 한/여러 줄로 배치되게 지정하는 속성
+      기본값 : nowrap
+  */
   flex-wrap: wrap;
   align-content: space-between;
 }
