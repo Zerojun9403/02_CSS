@@ -313,13 +313,31 @@ a 태그를 마우스로 클릭하면 : active
   margin: 25px;
   border: 2px solid #ff6b6b;
 }
-
 .price h5 {
   font-size: 30px;
   color: #d32f3f;
 }
 
 .price p {
+  font-size: 18px;
+}
+
+/* 치즈 버거 세트 부분 */
+.price2 {
+  background: repeating-linear-gradient(45deg, #ff6b6b 0%, #4ecdc4 100%);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 25px;
+  border: 2px solid #ff6b6b;
+}
+
+.price2 h5 {
+  font-size: 30px;
+  color: #d32f3f;
+}
+
+.price2 p {
   font-size: 18px;
 }
 
@@ -372,6 +390,19 @@ a 태그를 마우스로 클릭하면 : active
 .order-item p {
   color: #ff6b6b;
   font-size: 1.5rem; /* 24px */
+}
+
+.footer {
+  max-width: 800px;
+  margin: 0 auto; /* 상하 0 좌우 atuo*/
+  padding: 20px;
+  border-radius: 15px;
+}
+.footer p {
+  display: flex;
+  color: #808080;
+  font-size: 1rem;
+  text-align: center;
 }
 
 /* 태블릿 반응형 768px */
