@@ -1,0 +1,18 @@
+.flex-container {
+  /*
+        viewport : 현재 화면에서 보여자고 있는 영역(현재기기,프로그램화면)
+
+        vh(viewport Hight) : 현재 화면의 높이를 나타내는 단위 
+        vw(viewport Width) : 현재 화면의 가로너비를나타내는 단위 
+
+        100vh == 현재 화면 높이 100%
+    
+    
+    
+    */
+  background-color: lightblue;
+  height: 75vh; /* 현재 화면에 75% 만 차지하겠다. */
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
