@@ -43,7 +43,7 @@
     </p>
     <pre>
         /* 기본문법 */
-        background-image : 색상값;
+        background-image : 이미지 위치가 설정된 경로;
 
         /* 이미지가 들어있는 폴더로 접속하여 이미지를 가져오거나, 
             이미지 주소값을 인터넷에서 가져와서 작성할 수 있음 https://
@@ -60,8 +60,8 @@
       <div style="background: linear-gradient(45deg, #667eea, #764ba2)">
         선형 그라디언트
       </div>
-      <div style="background: redial-gradient(cricle, #667eea, #764ba2)">
-        선형 그라디언트
+      <div style="background: radial-gradient(circle, #667eea, #764ba2)">
+        원형 그라디언트
       </div>
     </div>
     <h2>background(통합 속성)</h2>
@@ -80,5 +80,16 @@
         background : linear-gradient (각도, 색상1 #fecdc4, 색상2 #4f6b8b ); /* 이미지+옵션 */
         
     </pre>
+    <div class="section">
+      <div
+        style="
+          background: #ff6b6b linear-gradient(45deg, rgba(255, 255, 255, 0.2));
+        "
+      >
+        색상 + 그라디언트 조합
+      </div>
+      <div class="gd-1">색상 + 패턴 조합</div>
+      <div class="gd-2">복잡한 다중 그라이디언트 조합</div>
+    </div>
   </body>
 </html>
