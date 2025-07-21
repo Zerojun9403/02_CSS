@@ -8,11 +8,11 @@
   </head>
   <body>
     <div class="container">
-      <h1>🍽️ 맛집 리스트 - 마르게리타 피자 🍕</h1>
+      <h1>🍽️ 맛집 리스트 - 마르게리타 피자</h1>
       <p>🇮🇹 이탈리아 정통의 맛을 그래도 재현한 클래식 피자</p>
 
       <!-- 추후 네비게이션 가져와 적용 하기 숙제!-->
-
+      <button class="hamburger">&#9776;</button>
       <div class="nav">
         <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
         <a href="#한식">한식</a>
@@ -26,13 +26,13 @@
       <div class="menu-detail">
         <!--메뉴 이미지 추후 추가-->
         <div class="menu-img">
-          <h3>마르게리타 피자</h3>
+          <h3>🍕마르게리타 피자</h3>
           <p>
             1889년 이탈리아 나폴리에서 처음 만들어진 마르게리타 피자는 피자의
             원조이다.
           </p>
           <div class="price">
-            <h5>🍕🏪🛒18,000원</h5>
+            <h5>18,000원</h5>
             <p>⭐️⭐️⭐️⭐️⭐️</p>
             <span>(4.8/5.0)</span>
           </div>
@@ -65,5 +65,12 @@
         </div>
       </div>
     </div>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector(".nav");
+      hamburger.addEventListener("click", () => {
+        nav.classList.toggle("show");
+      });
+    </script>
   </body>
 </html>

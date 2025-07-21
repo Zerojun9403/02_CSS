@@ -46,6 +46,19 @@ padding 상하 10 좌우 20
 모서리 20px
 a 태그 위 마우스 올리면 배경색 fff5252
 */
+.hamburger {
+  display: none;
+  /* 평소에는 숨기기
+      display : block -> 460 일떄 설정 */
+  display: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
 a {
   text-decoration: none;
   color: #333;
@@ -333,6 +346,7 @@ a 태그를 마우스로 클릭하면 : active
   */
 
   grid-template-columns: repeat(3, 1fr);
+  margin: 30px;
 }
 
 .order-item {
@@ -341,11 +355,23 @@ a 태그를 마우스로 클릭하면 : active
   border: 2px solid #ddd;
   border-radius: 10px;
   text-align: center;
+  margin-right: 5px;
 }
 
-.order-item :hover {
-  background-color: #ff6b6b;
+.order-item:hover {
+  border-color: #ff6b6b;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.order-item strong {
+  display: block;
+  color: #333;
+  margin-bottom: 9px;
+}
+
+.order-item p {
+  color: #ff6b6b;
+  font-size: 1.5rem; /* 24px */
 }
 
 /* 태블릿 반응형 768px */
@@ -365,6 +391,10 @@ a 태그를 마우스로 클릭하면 : active
     display: block;
     width: 100%;
     margin: 10px 0;
+  }
+  .order-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
 
   h1 {
@@ -399,7 +429,13 @@ a 태그를 마우스로 클릭하면 : active
   }
 
   h1 {
-    font-size: 29px;
+    font-size: 20px;
+  }
+  /* 
+  네비게이션을 모바일에서 확인했을 때 토글형태로 확인할 수 있다. 
+  */
+  .hamburger {
+    display: block;
   }
 
   .nav {
@@ -425,5 +461,14 @@ a 태그를 마우스로 클릭하면 : active
 
   .sign-container button {
     padding: 15px;
+  }
+
+  .재료리스트 {
+    gap: 8px;
+  }
+
+  .재료아이탬 {
+    padding: 6px 12px;
+    font-size: 10px;
   }
 }
