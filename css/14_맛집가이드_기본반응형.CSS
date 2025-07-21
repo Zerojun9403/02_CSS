@@ -46,7 +46,11 @@ padding 상하 10 좌우 20
 모서리 20px
 a 태그 위 마우스 올리면 배경색 fff5252
 */
-
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
 .nav {
   display: flex;
   justify-content: center;
@@ -134,7 +138,47 @@ a 태그 위 마우스 올리면 배경색 fff5252
   color: #666;
   margin: 0;
 }
+/* 클래스 명칭이 item 이고 item 클래스 명칭 내부에 존재하는 a 태그를 모두 꾸며주겠다!!!!!!!*/
+.item a {
+  /*
+  
+  
+  a 태그는 인라인 요소이기 때문에 text-alian  이 적용 힘듬
+  inline-block : a 태그를 블록 요소처럼 만들어서 패딩, 마진 등으로 재대로 적용되록함
+  float : right 요소를 오른쪽으로 띄움
+          -> inline 아니라 block 요소 처리 됨
 
+   display: inline-block;  float: right;
+   > 위의 경우에는 inline-block 이 무시되고,block 형태로 변경되면서 
+     태그 내부에 있는 요소 값이 오른쪽 정렬
+
+  display: inline-block;   float: right;
+  > float 속성 내부에는 display: inline-block 이 자동으로 포함되어 있으므로 
+    display 생략가능
+
+  float: right;
+  > display: inline-block; 가 포함되어 있으므로 display 가 없어도 됨!
+  */
+
+  float: right;
+  background-color: orange;
+  padding: 8px 16px;
+  border-radius: 15px;
+  font-size: 10px;
+}
+
+/* 
+a 태그 위에 마우스를 올리면 : hover 
+a 태그를 마우스로 클릭하면 : active 
+*/
+
+.item a:hover {
+  background-color: darkorange;
+}
+
+.item a:active {
+  background-color: lightblue;
+}
 /*** ======= 회원가입 CSS ======== ***/
 .sing-container {
   max-width: 600px;
