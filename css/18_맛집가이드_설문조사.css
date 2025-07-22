@@ -1,1 +1,142 @@
+form {
+  max-width: 1000px;
+  /* 최대 설문 폼 너비가 1000px */
+  margin: 30px auto;
+  /* 상하 좌우 30px 자동여백 */
+  padding: 2opx;
+}
 
+fieldset {
+  border: 2px solid #ff6b6b;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff8f8;
+}
+
+fieldset legend {
+  border: 2px solid #ff6b6b;
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  padding: 0 10px; /* 상하 0 좌우 10씩 */
+  background-color: white;
+  border-radius: 5px;
+}
+
+form > .input-field > label {
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+form > .input-field > label > input {
+  width: 70%;
+  border: 2px solid #ddd;
+  border-radius: 2px;
+}
+/*
+form > fieldset > label > input 
+    개발자가 지정한 범위에서 선택해야하는 input과
+    소비자가 자유롭게 작성해서 값을 개발자한테 전달하는 input이
+    5순위 태그 명칭으로만 디자인 속성을 사용해서 디자인적으로 충돌이 발생하므로
+    class 명칭으로 작성해주는것이 좋음
+
+*/
+form > .input-field > label > input:focus {
+  /* focus 의 경우 초반에 input태그에 작성한
+    실선 두께를 유지한 상태로 색상만 변경
+    border 대신 boder-color 를 이용하거나
+    ontline 대신 ontline-color 를 이용해서 
+    선두깨나 선종류는 패스하고 컬러만 변경*/
+  outline-color: #ff6b6b;
+}
+
+/*
+ fieldset 클래스 명칭이 chocie-field 인 태그 디자인 속성적용
+
+ .ç > label{
+ }
+*/
+.chocie-field {
+  text-align: center;
+}
+
+.chocie-field > label {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 10px 20px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.chocie-field > label:active {
+  border-color: #ff6b6b;
+  background-color: #fff8f8;
+}
+
+.chocie-field > label > input {
+  /* 
+    
+
+    ccent-color : check 된 체크박스 내부 색상을 변경 
+    체크된 체크표시 의 색상을 변경
+    */
+  accent-color: #ff6b6b;
+}
+
+.chocie-field > label > input:checked {
+  /* 
+    
+
+    ccent-color : check 된 체크박스 내부 색상을 변경 
+    체크된 체크표시 의 색상을 변경
+    */
+  filter: invert(1);
+  /*
+  
+  기존에 input 에서 주었던 accent 색상이나 
+  이외 모든색상을 반전 형태로 제공
+  보통 light테마 -> dark모드 테마로 변경하거나
+  색약용 모드에서 주로 사용함. 
+  
+  */
+}
+
+/*
+ % ==  디바이스 기기 크기에 맞춰서 
+ 이미지 너비 크기가 퍼센트 만큼 차지
+ 세로 너비는 비율에 따라 자동으로 퍼센트 만큼 감지되어 설정
+
+*/
+img {
+  display: block;
+  margin: 15px auto;
+  border-radius: 50%;
+  max-width: 300px;
+}
+iframe {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+form button {
+  padding: 12px 24px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/*
+child (odd)  : 홀수
+      (even) : 짝수
+*/
+form button:nth-child(odd) {
+  background-color: orange;
+}
+form button:nth-child(even) {
+  background-color: yellowgreen;
+}
