@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>체크박스 커스텀하기</title>
+    <script
+      src="https://kit.fontawesome.com/2b1cc8e2c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /*
+        link 태그로 css 확장자 파일을 가져오는 것과 순위가 동일함. 
+        style 태그로 html 내부에 스타일을 작성하는 것은
+        css 순위에 크게 영향을 미치치 않음
+        */
+      /*
+        <label class="custom">
+            <input type="checkbox" />
+            <span class="checkbox-icon"></span>
+            <span>초록배경+파란색 체크박스</span>
+        </label>
+        display : inline-flex
+        inline 내에서 나란히 배치하다록 설정
+        flex  custom label 태그 내부에 존재하는 <input> 태그랑 <span> 태그 를 나란히 배치
+
+        position : relative = label 태그 내부에서 기준점이됨(중심지 역할)
+
+      .custom input:checked + .checkbox-icon::after =
+           + .custom 클래스가 작성된 input이 : chcked(체크된) 상태일때 그 바로 다음에 오는 .checkbox-icon::after선택
+      
+      {
+        content: "";
+        border: solid #2196f3;
+        border-width: 0 3px 3px 0; 위 , 왼쪽테두리 없애기 ㄴ자 누운 모양
+        position: absolute;
+        left: 8px;
+        top: 4px;
+        width: 6px;
+        height: 12px;
+        transform: rotate(45deg); = 시계방향으로 45도 회전
+      }
+
+        
+        */
+      .custom {
+        display: inline-flex;
+        cursor: pointer;
+      }
+
+      .custom input {
+        display: none;
+      }
+
+      .custom .checkbox-icon {
+        width: 24px;
+        height: 24px;
+        background-color: #4caf50;
+        border-radius: 4px;
+        position: relative;
+      }
+      /* 체크 마크 만들기 */
+      .custom input:checked + .checkbox-icon::after {
+        content: "";
+        border: solid #2196f3;
+        border-width: 0 3px 3px 0;
+        position: absolute;
+        left: 8px;
+        top: 4px;
+        width: 6px;
+        height: 12px;
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>체크박스 커스텀하기</h1>
+    <label class="custom">
+      <input type="checkbox" />
+      <span class="checkbox-icon"></span>
+      <span>초록배경+파란색 체크박스</span> </label
+    ><br />
+    <style>
+      .custom2 {
+        display: inline-flex;
+        cursor: pointer;
+      }
+
+      .custom2 input {
+        display: none;
+      }
+      .custom2 i {
+        width: 24px;
+        height: 24px;
+        background-color: orange;
+        border-radius: 4px;
+        /*
+        
+        display: flex; 기본정렬
+        align-items: center; 세로에서 가운데
+        justify-content: center; 가로에서 가운데 
+        
+        */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 체크 됐을때 스타일*/
+      .custom2 input:checked + i {
+        background-color: #4caf50;
+        color: white;
+      }
+    </style>
+    <label class="custom2">
+      <input type="checkbox" checked />
+      <i class="fa-solid fa-check"></i>
+      <span>폰트어썸에서 가져온 체크박스 </span>
+    </label>
+    <br />
+
+    <style>
+      .custom3 {
+        display: inline-flex;
+        cursor: pointer;
+      }
+
+      .custom3 input {
+        display: none;
+      }
+
+      .custom3 i {
+        width: 24px;
+        height: 24px;
+        justify-content: center;
+        text-align: center;
+        color: orange;
+        background-color: white;
+        display: flex;
+      }
+
+      .custom3 input:checked + i {
+        width: 24px;
+        height: 24px;
+        background-color: lightblue;
+        color: blue;
+      }
+    </style>
+
+    <label class="custom3">
+      <input type="checkbox" />
+      <i class="fa-solid fa-check-double"></i>
+      <span>폰트어썸에서 가져온 체크박스 </span>
+    </label>
+  </body>
+</html>

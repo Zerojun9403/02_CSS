@@ -78,20 +78,26 @@ form > .input-field > label > input:focus {
 
 .chocie-field > label > input {
   /* 
-    
-
-    ccent-color : check 된 체크박스 내부 색상을 변경 
-    체크된 체크표시 의 색상을 변경
+    accent-color : check 된 체크박스 내부 색상을 변경 
+    체크된 체크표시 의 색상을 변경 경우
+    fontasome 이나 외부에서 작성한 svg폰트, icon을 사용해서 변경할 수 있음 
     */
   accent-color: #ff6b6b;
 }
 
-.chocie-field > label > input:checked {
+.chocie-field
+  > label
+  > input:checked
+  + .chocie-field
+  > label
+  > input:checked::after {
+  content: "ㅎ";
   /* 
     
 
     ccent-color : check 된 체크박스 내부 색상을 변경 
     체크된 체크표시 의 색상을 변경
+
     */
   filter: invert(1);
   /*
